@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Support Spectrum Tech Africa and help expand free technology education, mentorship and career opportunities for queer African youths.">
+  <title>Donate | Spectrum Tech Africa</title>
+  <style>
+    :root {
+      --navy: #071B49;
+      --navy-deep: #041333;
+      --yellow: #FFC928;
+      --ink: #14213d;
+      --muted: #536078;
+      --pale: #F2F5FC;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .rainbow {
+      height: 5px;
+      background: linear-gradient(90deg,#ed1c24 0 16.6%,#ff7a00 16.6% 33.2%,#ffc928 33.2% 49.8%,#00a86b 49.8% 66.4%,#00aeef 66.4% 83%,#7027d8 83%);
+    }
+    .site-header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #e8edf5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      min-height: 78px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      color: var(--navy);
+      min-width: 220px;
+    }
+    .site-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+}
+    .brand-name { font-size: 16px; font-weight: 800; line-height: 1.05; letter-spacing: .2px; }
+    .brand-tag { font-size: 10px; font-weight: 700; margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a { text-decoration: none; font-size: 14px; font-weight: 700; color: var(--navy); }
+    .nav-links a:hover { color: #7027d8; }
+    .nav-links .active, .nav-links .join {
+      background: var(--navy); color: white; padding: 10px 19px; border-radius: 24px;
+    }
+    .nav-links .join { background: var(--yellow); color: var(--navy); }
+    .hero {
+      background: var(--navy);
+      color: white;
+      min-height: 390px;
+      display: grid;
+      grid-template-columns: 44% 56%;
+      overflow: hidden;
+    }
+    .hero-copy {
+      padding: 62px max(30px, calc((100vw - 1180px)/2));
+      padding-right: 30px;
+      align-self: center;
+    }
+    .eyebrow { color: var(--yellow); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 800; }
+    h1 { font-size: clamp(38px, 5vw, 62px); line-height: 1.05; margin: 12px 0 18px; }
+    .hero-copy p { color: #e8eefb; font-size: 18px; max-width: 490px; margin: 0 0 27px; }
+    .hero-image { min-height: 390px; background: linear-gradient(90deg,var(--navy) 0%,rgba(7,27,73,.08) 28%), url("assets/donate-hero.jpg") center/cover no-repeat; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 800;
+      padding: 13px 23px; border-radius: 28px; background: var(--yellow); color: var(--navy);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px #0002; }
+    .section { max-width: 1180px; margin: auto; padding: 64px 24px; }
+    .section-heading { text-align: center; margin-bottom: 32px; }
+    .section-heading h2 { color: var(--navy); font-size: clamp(28px,3vw,38px); margin: 0 0 7px; line-height: 1.2; }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .rainbow-line { width: 145px; height: 5px; border-radius: 5px; margin: 15px auto 0; background: linear-gradient(90deg,#ed1c24,#ff7a00,#ffc928,#00a86b,#00aeef,#7027d8); }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .card {
+      border: 1px solid #e4eaf4; border-radius: 15px; overflow: hidden;
+      box-shadow: 0 5px 18px rgba(7,27,73,.07); background: white;
+      display: flex; flex-direction: column;
+    }
+    .card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .card-body { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+    .card h3 { margin: 0 0 8px; color: var(--navy); font-size: 20px; }
+    .card p { color: var(--muted); margin: 0 0 20px; flex: 1; }
+    .card a { display: inline-block; background: var(--navy); color: white; text-decoration: none; padding: 11px 15px; border-radius: 8px; text-align: center; font-weight: 700; font-size: 14px; }
+    .card a:hover { background: #173b80; }
+    .other-ways {
+      margin-top: 28px; background: var(--pale); border-radius: 16px; padding: 26px 30px;
+      display: grid; grid-template-columns: 1.2fr 2fr; gap: 28px; align-items: center;
+    }
+    .other-ways h3 { color: var(--navy); font-size: 24px; margin: 0 0 6px; }
+    .other-ways p { margin: 0; color: var(--muted); }
+    .ways-list { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .way { border-left: 1px solid #cbd5e7; padding-left: 18px; }
+    .way strong { display: block; color: var(--navy); margin-bottom: 4px; }
+    .way span { font-size: 14px; color: var(--muted); }
+    .impact {
+      background: var(--navy); color: white; border-radius: 18px; padding: 38px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center;
+    }
+    .impact h2 { font-size: 32px; margin: 0 0 10px; }
+    .impact p { color: #e0e8f8; margin: 0; }
+    .impact ul { margin: 0; padding-left: 22px; color: #fff; }
+    .impact li { margin: 8px 0; }
+    .cta-band {
+      margin: 0 auto 64px; max-width: 1180px; padding: 28px 32px; border-radius: 16px;
+      background: linear-gradient(110deg,#071B49,#102e6b); color: white;
+      display: flex; justify-content: space-between; align-items: center; gap: 20px;
+    }
+    .cta-band h2 { margin: 0 0 5px; font-size: 27px; }
+    .cta-band p { margin: 0; color: #e5ebf8; }
+    footer { background: var(--navy-deep); color: white; }
+    .footer-inner { max-width: 1180px; margin: auto; padding: 38px 24px 22px; display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+.brand-tag-footer {color: #aab2ce}
+    footer .brand { color: white; }
+    footer .brand-mark { color: var(--navy); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .footer-links a { color: #e5ebf8; text-decoration: none; font-size: 14px; }
+    .copyright { border-top: 1px solid #ffffff2b; text-align: center; padding: 17px 20px; font-size: 13px; color: #cbd5e7; }
+    @media (max-width: 850px) {
+      .nav { flex-wrap: wrap; }
+      .nav-links { width: 100%; overflow-x: auto; gap: 17px; padding-bottom: 5px; }
+      .nav-links a { white-space: nowrap; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 48px 25px 28px; }
+      .hero-image { min-height: 270px; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .other-ways, .impact { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .cards { grid-template-columns: 1fr; }
+      .card img { height: 210px; }
+      .ways-list { grid-template-columns: 1fr; }
+      .way { border-left: 0; border-top: 1px solid #cbd5e7; padding: 12px 0 0; }
+      .cta-band { margin: 0 16px 45px; flex-direction: column; align-items: flex-start; }
+      .section { padding: 45px 18px; }
+      .impact { padding: 27px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rainbow"></div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Spectrum Tech Africa home">
+        <img src="assets/sta-logo.png"
+     alt="Spectrum Tech Africa Logo"
+     class="site-logo">
+        <span><span class="brand-name">SPECTRUM TECH AFRICA</span><br><span class="brand-tag">Learn. Grow. Build. Thrive.</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="programmes.html">Our Programmes</a>
+        <a href="community.html">Community</a>
+        <a class="active" href="donate.html" aria-current="page">Donate</a>
+        <a href="help-centre.html">Help Centre</a>
+        <a class="join" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Join Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Invest in potential. Support opportunity.</div>
+        <h1>Support Our<br>Mission</h1>
+        <p>Your generosity helps us provide free technology and finance education, mentorship and career opportunities for LGBTQ+ African youths.</p>
+        <a class="btn" href="#donation-areas">Explore Ways to Donate&nbsp; →</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Young Black African learners working together on technology"></div>
+    </section>
+
+    <section class="section" id="donation-areas">
+      <div class="section-heading">
+        <h2>Ways to Donate</h2>
+        <p>Choose an area you would like to support and help us create greater impact.</p>
+        <div class="rainbow-line"></div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <img src="assets/learning-access.jpg" alt="Learners using computers in a technology learning space">
+          <div class="card-body">
+            <h3>Technology and Learning Tools</h3>
+            <p>Help provide laptops, computers, reliable internet access, software and other digital tools that make online learning possible.</p>
+            <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Support Technology →</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/solar-power.jpg" alt="Solar panels supporting reliable electricity">
+          <div class="card-body">
+            <h3>Power and Solar Support</h3>
+            <p>Support reliable electricity for online classes, practical sessions and independent study through solar power and backup solutions.</p>
+            <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Support Power →</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/mentorship.jpg" alt="A mentor guiding a learner through a computer activity">
+          <div class="card-body">
+            <h3>Mentorship and Community</h3>
+            <p>Help us connect learners with mentors, organise community activities and build a supportive environment where people can grow.</p>
+            <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Support Mentorship →</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/career-growth.jpg" alt="A young professional developing skills on a computer">
+          <div class="card-body">
+            <h3>Career Development</h3>
+            <p>Contribute to career guidance, professional development resources, portfolio building and pathways to employment.</p>
+            <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Support Careers →</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/learning-access.jpg" alt="A learner studying with a laptop">
+          <div class="card-body">
+            <h3>Free Learning Programmes</h3>
+            <p>Help sustain free courses in Python, data analytics, artificial intelligence, web development, financial literacy and more.</p>
+            <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Support Learning →</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/mentorship.jpg" alt="Learners collaborating as a community">
+          <div class="card-body">
+            <h3>General Community Support</h3>
+            <p>Make an unrestricted contribution that allows the team to direct support to the community's most urgent learning needs.</p>
+            <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Give General Support →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="other-ways">
+        <div>
+          <h3>Other Ways to Contribute</h3>
+          <p>You can support the community with more than a financial donation. Your time, knowledge and professional connections can also make a difference.</p>
+        </div>
+        <div class="ways-list">
+          <div class="way"><strong>Donate in kind</strong><span>Offer laptops, accessories, data or learning materials.</span></div>
+          <div class="way"><strong>Volunteer your skills</strong><span>Mentor learners or lead a practical session.</span></div>
+          <div class="way"><strong>Partner with us</strong><span>Connect us with organisations and opportunities.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="impact">
+        <div>
+          <div class="eyebrow">Your support has purpose</div>
+          <h2>Why Donate?</h2>
+          <p>Your contribution helps reduce barriers to digital education and gives more young people the tools and support to build their futures.</p>
+        </div>
+        <ul>
+          <li>Expand access to free, practical technology education.</li>
+          <li>Help learners overcome electricity and internet challenges.</li>
+          <li>Build an inclusive and supportive learning community.</li>
+          <li>Strengthen pathways to skills, confidence and employment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div>
+        <h2>Be Part of the Change</h2>
+        <p>Contact Spectrum Tech Africa to discuss a donation, partnership or in-kind contribution.</p>
+      </div>
+      <a class="btn" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Contact Us to Donate →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <a class="brand" href="index.html">
+        <span><span class="brand-name">SPECTRUM TECH AFRICA</span><br><span class="brand-tag-footer"><small>Learn. Grow. Build. Thrive.<small></span></span>
+      </a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#programmes">Programmes</a>
+        <a href="donate.html">Donate</a>
+        <a href="help-centre.html">Help Centre</a>
+        <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">@spectrumtechafrica</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Spectrum Tech Africa. All rights reserved. &nbsp; | &nbsp; Learn. Grow. Build. Thrive.</div>
+  </footer>
+</body>
+</html>

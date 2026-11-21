@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Spectrum Tech Africa Help Centre. Find answers, learning guides and support for your learning journey.">
+<title>Help Centre | Spectrum Tech Africa</title>
+<style>
+:root{--navy:#101d49;--ink:#17213b;--muted:#64708a;--purple:#7046d8;--blue:#1689d8;--green:#12a875;--pink:#e52b91;--yellow:#f5bd24;--line:#e8ebf2;--paper:#f7f8fc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit}.topbar{background:#071B49;border-bottom:1px solid var(--line)}.nav{max-width:1160px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+.topline { height: 5px; background: linear-gradient(90deg, #FF7A00 0 16%, #FFC928 16% 32%, #00B86B 32% 48%, #00AEEF 48% 64%, #7027D8 64% 80%, #EC168B 80%); }
+
+.site-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+      .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      color: var(--navy);
+      min-width: 220px;
+    }
+
+    .brand img { width: 58px; height: 58px; object-fit: cover; }
+    .brand-name { color: #fff; font-size: 16px; font-weight: 800; line-height: 1.05; letter-spacing: .2px; }
+    .brand-tag { color: #fff; font-size: 11px; letter-spacing: .02em; }
+    .brand-tag-footer { color: #FFFFFF; font-size: 11px; letter-spacing: .02em; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: 14px; font-weight: 650; color: #000000; }
+
+
+.navlinks{display:flex;gap:24px;align-items:center}.navlinks a{text-decoration:none;color:#ffffff;font-size:14px;font-weight:600}.navlinks a:hover{color:var(--purple)}.hero{background:radial-gradient(circle at 12% 10%,#eee8ff 0,transparent 32%),radial-gradient(circle at 90% 10%,#e4f7f1 0,transparent 28%),linear-gradient(135deg,#fff,#f5f7ff);padding:72px 24px 62px;text-align:center;border-bottom:1px solid var(--line)}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #e4ddff;background:#fff;color:var(--purple);border-radius:30px;padding:6px 13px;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.12;color:var(--navy);margin:20px auto 14px;max-width:760px;letter-spacing:-1.5px}.hero p{font-size:17px;color:#5e6982;max-width:640px;margin:0 auto 28px}.searchbox{max-width:660px;margin:auto;position:relative}.searchbox input{width:100%;height:62px;border:1px solid #dfe3ed;border-radius:14px;padding:0 58px 0 20px;font-size:16px;box-shadow:0 12px 32px #18244a12;outline:none;background:white}.searchbox input:focus{border-color:var(--purple);box-shadow:0 0 0 4px #7046d81a}.searchicon{position:absolute;right:20px;top:17px;font-size:22px;color:#8992a7}.searchhint{font-size:12px;color:#8a93a8;margin-top:10px}.wrap{max-width:1120px;margin:auto;padding:54px 24px}.sectionhead{text-align:center;margin-bottom:28px}.sectionhead h2{color:var(--navy);font-size:29px;margin:0 0 7px}.sectionhead p{color:var(--muted);margin:0}.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;text-decoration:none;transition:.2s;min-height:150px}.cat:hover{transform:translateY(-3px);box-shadow:0 12px 30px #1a24500d;border-color:#d8d0fa}.caticon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:21px;margin-bottom:12px}.cat h3{margin:0 0 4px;color:var(--navy);font-size:16px}.cat p{margin:0;color:var(--muted);font-size:13px}.faqarea{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.faq-layout{display:grid;grid-template-columns:245px 1fr;gap:34px}.sidebox{align-self:start;position:sticky;top:20px}.sidebox h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:#8992a7;margin:0 0 12px}.filterbtn{display:block;width:100%;text-align:left;border:0;background:transparent;padding:10px 12px;border-radius:9px;color:#59647e;font:600 14px inherit;cursor:pointer}.filterbtn.active,.filterbtn:hover{background:#f0edff;color:var(--purple)}.faqgroup{margin-bottom:30px}.faqgroup h3{font-size:19px;color:var(--navy);margin:0 0 12px}.faq{border:1px solid var(--line);border-radius:12px;margin:9px 0;background:#fff;overflow:hidden}.faq summary{list-style:none;cursor:pointer;padding:17px 48px 17px 18px;font-weight:700;color:#263252;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:18px;top:13px;font-size:23px;color:var(--purple);font-weight:400}.faq[open] summary:after{content:"−"}.answer{padding:0 18px 18px;color:#5d6880;font-size:14px}.answer p{margin:0 0 9px}.answer ul{padding-left:20px;margin:8px 0}.answer a{color:var(--purple);font-weight:650}.noresults{display:none;text-align:center;padding:34px;border:1px dashed #ccd2e1;border-radius:14px;color:var(--muted)}.contact{background:linear-gradient(120deg,#111d49,#29215f);color:#fff;border-radius:22px;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact h2{font-size:25px;margin:0 0 7px}.contact p{color:#d5d9ec;margin:0;max-width:610px;font-size:14px}.contact a{background:#fff;color:var(--navy);text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:800;white-space:nowrap;font-size:14px}.contact a:hover{background:#f2edff}.footer{background:#0c1536;color:#c8cee2;padding:30px 24px}.footinner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}.footbrand{font-weight:800;color:#fff}.footinner small{display:block;color:#aab2ce}.footlinks{display:flex;gap:18px;flex-wrap:wrap}.footlinks a{color:#d4d9e9;text-decoration:none;font-size:13px}.footlinks a:hover{color:#fff}.hidden{display:none!important}.notice{font-size:12px;color:#8791a8;margin-top:14px}
+
+@media(max-width:760px){.nav{padding:10px 16px}.navlinks{gap:12px}.navlinks a{font-size:12px}.brand img{width:45px;height:45px}.brand strong{font-size:13px}
+.brand small{font-size:9px}.hero{padding:54px 18px 48px}.hero p{font-size:15px}.wrap{padding:42px 18px}.categories{grid-template-columns:repeat(2,1fr)}.faq-layout{grid-template-columns:1fr;gap:18px}.sidebox{position:static}.filters{display:flex;gap:7px;overflow:auto;padding-bottom:5px}.filterbtn{white-space:nowrap;width:auto;border:1px solid var(--line);padding:8px 12px}.contact{display:block;padding:26px}.contact a{display:inline-block;margin-top:18px}.footinner{display:block}.footlinks{margin-top:16px}}
+@media(max-width:440px){.categories{grid-template-columns:1fr}.navlinks a:first-child{display:none}.hero h1{font-size:35px}.searchbox input{height:56px}}
+</style>
+</head>
+<body>
+  <div class="topline"></div>
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="Spectrum Tech Africa home">
+        <img src="assets/sta-logo.png"
+     alt="Spectrum Tech Africa Logo"
+     class="site-logo">
+        <span><span class="brand-name">SPECTRUM TECH AFRICA</span><br><span class="brand-tag">Learn. Grow. Build. Thrive.</span></span>
+      </a>
+
+    <div class="navlinks"><a href="#categories">Help topics</a><a href="#faqs">FAQs</a><a href="#contact">Contact support</a></div>
+  </nav>
+</header>
+<main id="top">
+<section class="hero">
+  <span class="eyebrow">✦ Learner support centre</span>
+  <h1>How can we help you today?</h1>
+  <p>Find answers, practical guides and support for your learning journey with Spectrum Tech Africa.</p>
+  <div class="searchbox"><input id="search" type="search" placeholder="Search for a question or topic..." aria-label="Search help articles"><span class="searchicon">⌕</span></div>
+  <div class="searchhint">Try “Google Classroom”, “assignments”, “certificate” or “AI policy”.</div>
+</section>
+
+<section class="wrap" id="categories">
+  <div class="sectionhead"><h2>Browse help topics</h2><p>Choose a topic to find the guidance you need.</p></div>
+  <div class="categories">
+    <a class="cat" href="#faqs" data-filter="Getting started"><div class="caticon" style="background:#f0ebff">🚀</div><h3>Getting started</h3><p>Joining STA, applications, screening and admission.</p></a>
+    <a class="cat" href="#faqs" data-filter="Learning platform"><div class="caticon" style="background:#e7f4ff">💻</div><h3>Learning platform</h3><p>Google Classroom, Colab, Drive and learning access.</p></a>
+    <a class="cat" href="#faqs" data-filter="Courses and learning"><div class="caticon" style="background:#e5f8ef">📚</div><h3>Courses and learning</h3><p>Course structure, lessons, participation and progress.</p></a>
+    <a class="cat" href="#faqs" data-filter="Assignments and assessment"><div class="caticon" style="background:#fff5dc">📝</div><h3>Assignments and assessment</h3><p>Submitting work, quizzes, grading and feedback.</p></a>
+    <a class="cat" href="#faqs" data-filter="Policies and conduct"><div class="caticon" style="background:#ffeaf4">🤝</div><h3>Policies and conduct</h3><p>Academic integrity, responsible AI and group work.</p></a>
+    <a class="cat" href="#faqs" data-filter="Certificates and support"><div class="caticon" style="background:#e5f7f7">🎓</div><h3>Certificates and support</h3><p>Completion requirements and getting help.</p></a>
+  </div>
+</section>
+
+<section class="faqarea" id="faqs">
+<div class="wrap">
+  <div class="sectionhead"><h2>Frequently asked questions</h2><p>Quick answers to common learner questions.</p></div>
+  <div class="faq-layout">
+    <aside class="sidebox"><h3>Filter by topic</h3><div class="filters">
+      <button class="filterbtn active" data-topic="All">All questions</button>
+      <button class="filterbtn" data-topic="Getting started">Getting started</button>
+      <button class="filterbtn" data-topic="Learning platform">Learning platform</button>
+      <button class="filterbtn" data-topic="Courses and learning">Courses and learning</button>
+      <button class="filterbtn" data-topic="Assignments and assessment">Assignments and assessment</button>
+      <button class="filterbtn" data-topic="Policies and conduct">Policies and conduct</button>
+      <button class="filterbtn" data-topic="Certificates and support">Certificates and support</button>
+    </div></aside>
+    <div>
+      <div class="faqgroup" data-group="Getting started"><h3>Getting started</h3>
+        <details class="faq"><summary>What is Spectrum Tech Africa?</summary><div class="answer"><p>Spectrum Tech Africa (STA) is an inclusive learning initiative that supports young people through technology and finance education, mentorship, and career development. Our aim is to make practical learning opportunities accessible and supportive.</p></div></details>
+        <details class="faq"><summary>How do I apply for an STA course?</summary><div class="answer"><p>Complete the official application form when applications are open. Provide accurate contact details and information about your learning interests. Follow the instructions shared through STA's official communication channels.</p></div></details>
+        <details class="faq"><summary>What happens after I submit my application?</summary><div class="answer"><p>Applicants may be invited to complete a screening process. This can include an online form and a short one-to-one interview. Successful applicants receive an official admission or offer message with the next steps.</p></div></details>
+        <details class="faq"><summary>Do I need previous programming experience?</summary><div class="answer"><p>Not necessarily. Beginner courses are designed to introduce concepts step by step. Check the requirements for the specific course you are applying to.</p></div></details>
+        <details class="faq"><summary>Are STA courses free?</summary><div class="answer"><p>Course fees and scholarship opportunities depend on the specific cohort and programme. Always check the official announcement or admission offer for the applicable fee and any available scholarship.</p></div></details>
+      </div>
+      <div class="faqgroup" data-group="Learning platform"><h3>Learning platform</h3>
+        <details class="faq"><summary>How do I access my online classroom?</summary><div class="answer"><p>After admission, check the email address you used during registration for your classroom invitation and access instructions. Follow the link to join the correct Google Classroom using the account specified by STA.</p></div></details>
+        <details class="faq"><summary>Which tools does STA use for online learning?</summary><div class="answer"><p>Depending on the course, STA may use Google Classroom for course announcements and activities, Google Colab for coding practice, Google Drive for learning materials, and Google Forms for quizzes or submissions.</p></div></details>
+        <details class="faq"><summary>I cannot access Google Classroom. What should I do?</summary><div class="answer"><ul><li>Confirm that you are signed in to the correct Google account.</li><li>Open the invitation link sent to your registered email.</li><li>Check that the link has not expired or been replaced.</li><li>If the problem continues, contact your course facilitator or STA programme coordinator.</li></ul></div></details>
+        <details class="faq"><summary>Do I need a laptop to participate?</summary><div class="answer"><p>A laptop or desktop computer is strongly recommended for coding and practical activities. Some course materials may be accessible on a smartphone, but a phone may not support every learning task comfortably.</p></div></details>
+      </div>
+      <div class="faqgroup" data-group="Courses and learning"><h3>Courses and learning</h3>
+        <details class="faq"><summary>How are STA courses organised?</summary><div class="answer"><p>Course activities may include lessons, demonstrations, guided practice, independent challenges, discussions, assignments and assessments. Your course facilitator will share the schedule and expectations for your cohort.</p></div></details>
+        <details class="faq"><summary>How do I keep up with weekly activities?</summary><div class="answer"><p>Check Google Classroom and your official learner communication channel regularly. Follow the weekly learning plan, note deadlines, complete activities in order and ask questions early when you need help.</p></div></details>
+        <details class="faq"><summary>What if I miss a live session?</summary><div class="answer"><p>Notify your facilitator if possible, review any materials or session notes shared afterwards, and ask how to catch up on missed work. Any recording or make-up arrangement will depend on the course.</p></div></details>
+        <details class="faq"><summary>How can I ask my facilitator a question?</summary><div class="answer"><p>Use the official course discussion space or the communication channel provided for your cohort. Include the course week, activity or question you are referring to so the facilitator can assist you efficiently.</p></div></details>
+      </div>
+      <div class="faqgroup" data-group="Assignments and assessment"><h3>Assignments and assessment</h3>
+        <details class="faq"><summary>Where do I submit my assignments?</summary><div class="answer"><p>Submit assignments through the method stated in the activity instructions, usually Google Classroom or a linked Google Form or Colab notebook. Check that your submission is complete before the deadline.</p></div></details>
+        <details class="faq"><summary>Can I resubmit an assignment?</summary><div class="answer"><p>Resubmission depends on the assignment settings and course instructions. If you need another attempt or have submitted the wrong file, contact your facilitator promptly rather than creating multiple unrequested submissions.</p></div></details>
+        <details class="faq"><summary>How will my work be graded?</summary><div class="answer"><p>Assessment methods and grading criteria are shared by the facilitator. Read the rubric before starting, answer every part of the task and make sure your work demonstrates your own understanding.</p></div></details>
+        <details class="faq"><summary>What should I do if I disagree with a grade?</summary><div class="answer"><p>Review the assignment instructions and rubric first. Then contact your facilitator respectfully, identify the specific part you would like reviewed and provide a clear explanation.</p></div></details>
+      </div>
+      <div class="faqgroup" data-group="Policies and conduct"><h3>Policies and conduct</h3>
+        <details class="faq"><summary>What are the expectations for group work?</summary><div class="answer"><p>Every group member is expected to communicate respectfully, complete agreed tasks, contribute meaningfully and give appropriate credit. If a member is not participating, document reasonable attempts to contact them and inform the facilitator.</p></div></details>
+        <details class="faq"><summary>Can I use AI tools for assignments?</summary><div class="answer"><p>Use of AI must follow the assignment instructions and STA's Responsible AI Use Policy. Where AI assistance is permitted, use it transparently and responsibly. You remain responsible for checking, understanding and being able to explain the work you submit.</p></div></details>
+        <details class="faq"><summary>What counts as plagiarism?</summary><div class="answer"><p>Plagiarism includes presenting another person's words, code, ideas or work as your own without proper acknowledgement. Submit original work, cite sources when required and clearly disclose assistance in line with course rules.</p></div></details>
+        <details class="faq"><summary>How should learners treat one another?</summary><div class="answer"><p>STA expects respectful, inclusive and professional behaviour in every learning space. Bullying, harassment, discrimination, threats, abusive language and sharing another learner's private information without consent are not acceptable.</p></div></details>
+      </div>
+      <div class="faqgroup" data-group="Certificates and support"><h3>Certificates and support</h3>
+        <details class="faq"><summary>Will I receive a certificate after the course?</summary><div class="answer"><p>Certificate eligibility depends on the requirements of the specific programme. These may include completing required activities, meeting assessment thresholds and fulfilling attendance or participation expectations. Your cohort will receive the applicable criteria.</p></div></details>
+        <details class="faq"><summary>My name is incorrect on my learner records. How can I correct it?</summary><div class="answer"><p>Contact the programme coordinator through your official cohort channel. Provide the correct name and the details needed to identify your learner record. Use the name you want printed on your certificate where requested.</p></div></details>
+        <details class="faq"><summary>How do I report a problem or make a complaint?</summary><div class="answer"><p>Contact your course facilitator or programme coordinator through the official communication channel. Explain what happened, when it happened and what support you need. Include relevant evidence where appropriate. STA aims to handle concerns fairly and with suitable confidentiality.</p></div></details>
+        <details class="faq"><summary>How can I follow STA announcements?</summary><div class="answer"><p>Follow <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">@spectrumtechafrica on Instagram</a> and monitor the official communication channel provided for your cohort.</p></div></details>
+      </div>
+      <div class="noresults" id="noresults">No matching help articles found. Try a different search term or contact the STA team.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact"><div><h2>Still need a hand?</h2><p>If you cannot find the answer you need, contact your course facilitator or programme coordinator through your official cohort communication channel. You can also follow STA for updates and announcements.</p></div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Visit STA on Instagram ↗</a></div>
+  <p class="notice">This Help Centre provides general guidance. Your course instructions and official STA announcements take priority where programme-specific requirements differ.</p>
+</section>
+</main>
+<footer class="footer"><div class="footinner"><div><div class="footbrand">SPECTRUM TECH AFRICA</div><small>Learn. Grow. Build. Thrive.</small><small>© <span id="year"></span> Spectrum Tech Africa</small></div><div class="footlinks"><a href="#categories">Help topics</a><a href="#faqs">FAQs</a><a href="#contact">Contact support</a><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Instagram</a></div></div></footer>
+<script>
+const search=document.getElementById('search');
+const faqs=[...document.querySelectorAll('.faq')];
+const groups=[...document.querySelectorAll('.faqgroup')];
+const buttons=[...document.querySelectorAll('.filterbtn')];
+const noresults=document.getElementById('noresults');
+let activeTopic='All';
+function update(){
+ const q=search.value.trim().toLowerCase(); let shown=0;
+ faqs.forEach(f=>{
+   const group=f.closest('.faqgroup').dataset.group;
+   const matchTopic=activeTopic==='All'||group===activeTopic;
+   const matchText=!q||f.innerText.toLowerCase().includes(q);
+   const visible=matchTopic&&matchText;
+   f.classList.toggle('hidden',!visible);
+   if(visible)shown++;
+ });
+ groups.forEach(g=>g.classList.toggle('hidden',!([...g.querySelectorAll('.faq')].some(f=>!f.classList.contains('hidden')))));
+ noresults.style.display=shown?'none':'block';
+}
+search.addEventListener('input',update);
+buttons.forEach(b=>b.addEventListener('click',()=>{
+ activeTopic=b.dataset.topic;buttons.forEach(x=>x.classList.toggle('active',x===b));update();
+}));
+document.querySelectorAll('.cat').forEach(c=>c.addEventListener('click',()=>{
+ activeTopic=c.dataset.filter;buttons.forEach(x=>x.classList.toggle('active',x.dataset.topic===activeTopic));update();
+}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

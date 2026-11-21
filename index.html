@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spectrum Tech Africa supports young people through accessible technology and finance learning, mentorship and career development.">
+  <title>Spectrum Tech Africa | Learn. Grow. Build. Thrive.</title>
+  <style>
+    :root {
+      --navy: #071B49;
+      --navy-2: #102A63;
+      --blue: #00AEEF;
+      --purple: #7027D8;
+      --green: #00B86B;
+      --yellow: #FFC928;
+      --pink: #EC168B;
+      --teal: #00A99D;
+      --ink: #17233B;
+      --muted: #667085;
+      --paper: #F4F6FA;
+      --white: #FFFFFF;
+      --line: #E5EAF2;
+      --shadow: 0 18px 50px rgba(7,27,73,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--white); line-height: 1.6; } 
+.site-header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #e8edf5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+.site-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+
+.nav {
+      max-width: 1180px;
+      margin: auto;
+      min-height: 78px;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand-name { font-size: 16px; font-weight: 800; line-height: 1.05; letter-spacing: .2px; }
+    .brand-tag { font-size: 10px; font-weight: 700; margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 25px; }
+    .nav-links a { text-decoration: none; font-size: 14px; font-weight: 700; color: var(--navy); }
+    .nav-links a:hover { color: #7027d8; }
+    .nav-links .active, .nav-links .join {
+      background: var(--navy); color: white; padding: 10px 19px; border-radius: 24px;
+    }
+    .nav-links .join { background: var(--yellow); color: var(--navy); }
+
+
+   a { color: inherit; text-decoration: none; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .topline { height: 5px; background: linear-gradient(90deg, #FF7A00 0 16%, #FFC928 16% 32%, #00B86B 32% 48%, #00AEEF 48% 64%, #7027D8 64% 80%, #EC168B 80%); }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(0, 0, 0, 0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+
+      .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      color: var(--navy);
+      min-width: 220px;
+    }
+    .brand img { width: 58px; height: 58px; object-fit: cover; }
+    .brand-tag { color: #071B49; font-size: 11px; letter-spacing: .02em; }
+    .brand-tag-footer { color: #aab2ce; font-size: 11px; letter-spacing: .02em; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: 14px; font-weight: 650; color: #000000; }
+    .nav-links a:hover { color: var(--purple); }
+    .nav-cta, .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 9px; padding: 12px 19px; background: #FFFFFF; color: black; font-weight: 750; font-size: 14px; transition: .2s ease; border: 2px solid var(--navy); }
+    .nav-cta:hover, .btn:hover { background: #FFC928; transform: translateY(-1px); }
+    .menu-btn { display: none; border: 1px solid var(--line); background: white; color: var(--navy); padding: 9px 12px; border-radius: 8px; font-size: 20px; }
+    .hero { padding: 46px 0 54px; background: linear-gradient(180deg, #F7F9FD 0%, #FFFFFF 100%); }
+    .hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 44px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--purple); font-weight: 800; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow:before { content: ""; width: 25px; height: 3px; border-radius: 5px; background: var(--yellow); }
+    h1 { margin: 15px 0 18px; color: var(--navy); font-size: clamp(38px, 5vw, 61px); line-height: 1.06; letter-spacing: -.045em; }
+    h1 span { color: var(--purple); }
+    .hero-copy { max-width: 520px; color: #59657A; font-size: 17px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .btn-outline { background: transparent; color: var(--navy); }
+    .btn-outline:hover { background: #EEF2FA; }
+    .hero-note { margin-top: 21px; color: #68758A; font-size: 12px; }
+    .hero-note strong { color: var(--navy); }
+    .hero-visual { position: relative; }
+    .hero-visual img { display: block; width: 100%; aspect-ratio: 1.48 / 1; object-fit: cover; object-position: center; border-radius: 22px; box-shadow: var(--shadow); }
+    .visual-accent { position: absolute; width: 78px; height: 78px; border-radius: 20px; right: -15px; bottom: -16px; z-index: -1; background: linear-gradient(135deg, var(--yellow), var(--pink), var(--purple)); transform: rotate(8deg); }
+    .image-caption { position: absolute; left: 18px; bottom: 17px; color: white; background: rgba(7,27,73,.82); border: 1px solid rgba(255,255,255,.25); border-radius: 9px; padding: 9px 13px; font-size: 12px; font-weight: 700; backdrop-filter: blur(8px); }
+    .trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: white; }
+    .trust-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .trust-inner p { margin: 0; color: var(--navy); font-weight: 800; font-size: 14px; }
+    .trust-tags { display: flex; gap: 9px; flex-wrap: wrap; }
+    .tag { border-radius: 100px; padding: 7px 12px; background: #F3F5FA; color: #46536B; font-size: 12px; font-weight: 700; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 690px; margin: 0 auto 35px; text-align: center; }
+    .section-head h2 { color: var(--navy); margin: 9px 0 10px; font-size: clamp(28px, 3.5vw, 40px); line-height: 1.15; letter-spacing: -.03em; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature { border: 1px solid var(--line); border-radius: 16px; padding: 25px; background: white; box-shadow: 0 6px 24px rgba(7,27,73,.035); }
+    .feature-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; font-size: 21px; font-weight: 900; margin-bottom: 18px; }
+    .purple { background: #F1EAFE; color: var(--purple); }
+    .green { background: #E5F8EF; color: #008F54; }
+    .blue { background: #E5F6FD; color: #007FB4; }
+    .feature h3 { margin: 0 0 8px; color: var(--navy); font-size: 18px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; }
+    .pathway { background: var(--paper); }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: steps; }
+    .step { background: white; border-radius: 14px; padding: 22px; border: 1px solid var(--line); }
+    .step-number { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; color: white; background: var(--navy); font-weight: 850; margin-bottom: 14px; }
+    .step h3 { margin: 0 0 6px; color: var(--navy); font-size: 16px; }
+    .step p { margin: 0; color: var(--muted); font-size: 13px; }
+    .cta-band { padding: 0 0 78px; background: var(--paper); }
+    .cta-box { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 36px; border-radius: 18px; color: white; background: var(--navy); overflow: hidden; position: relative; }
+    .cta-box:after { content: ""; position: absolute; width: 210px; height: 210px; right: 18%; top: -145px; border: 24px solid rgba(255,255,255,.08); border-radius: 50%; }
+    .cta-box h2 { margin: 0 0 5px; font-size: 26px; }
+    .cta-box p { margin: 0; color: #D8E1F4; font-size: 14px; }
+    .cta-box .btn { background: var(--yellow); color: var(--navy); border-color: var(--yellow); white-space: nowrap; position: relative; z-index: 1; }
+    footer { background:#071B49; color: white; }
+    .footer-inner { max-width: 1180px; margin: auto; padding: 38px 24px 22px; display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+    footer .brand { color: white; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .footer-links a { color: #e5ebf8; text-decoration: none; font-size: 14px; }
+    .copyright { border-top: 1px solid #ffffff2b; text-align: center; padding: 17px 20px; font-size: 13px; color: #cbd5e7; }
+    .copyright { border-top: 1px solid rgba(255,255,255,.12); margin-top: 25px; padding-top: 18px; }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero-copy { max-width: 650px; }
+      .hero-visual { max-width: 700px; }
+      .features { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 16px; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 28px, 1160px); }
+      .nav { min-height: 72px; }
+      .brand img { width: 45px; height: 45px; }
+      .brand-name { font-size: 12px; }
+      .brand-tag { font-size: 10px; }
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 72px; left: 0; right: 0; background: white; padding: 18px 22px 22px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; }
+      .nav-links.open { display: flex; }
+      .nav-cta { text-align: center; }
+      .hero { padding: 35px 0 42px; }
+      h1 { font-size: 42px; }
+      .hero-copy { font-size: 15px; }
+      .hero-visual img { aspect-ratio: 1.15 / 1; border-radius: 16px; }
+      .trust-inner { padding: 18px 0; }
+      section { padding: 58px 0; }
+      .features, .steps { grid-template-columns: 1fr; }
+      .feature { padding: 21px; }
+      .cta-box { padding: 26px 22px; align-items: flex-start; flex-direction: column; }
+      .cta-box h2 { font-size: 23px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Spectrum Tech Africa home">
+        <img src="assets/sta-logo.png"
+     alt="Spectrum Tech Africa Logo"
+     class="site-logo">
+        <span><span class="brand-name">SPECTRUM TECH AFRICA</span><br><span class="brand-tag">Learn. Grow. Build. Thrive.</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="programmes.html">Our Programmes</a>
+        <a href="community.html">Community</a>
+        <a class="active" href="donate.html" aria-current="page">Donate</a>
+        <a href="help-centre.html">Help Centre</a>
+        <a class="join" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Join Us</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Learning opportunities. Brighter futures.</div>
+          <h1>Build skills.<br><span>Shape your future.</span></h1>
+          <p class="hero-copy">Spectrum Tech Africa creates welcoming learning opportunities for young people to explore technology, finance and new career possibilities through practical learning, mentorship and community.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#learning">Explore what we do <span aria-hidden="true">&nbsp;→</span></a>
+            <a class="btn btn-outline" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Join our community</a>
+          </div>
+          <p class="hero-note"><strong>Learn. Grow. Build. Thrive.</strong> &nbsp; A community where your potential can grow.</p>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/sta-learners-banner.png" alt="Young Black learners collaborating around laptops in a technology learning space">
+          <div class="image-caption">Learn together. Create what's next.</div>
+          <div class="visual-accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-inner">
+        <p>Practical learning for real-world opportunities</p>
+        <div class="trust-tags"><span class="tag">Technology</span><span class="tag">Finance</span><span class="tag">Mentorship</span><span class="tag">Career development</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">About Spectrum Tech Africa</div>
+          <h2>Opportunity grows when learning is within reach.</h2>
+          <p>We are building an inclusive learning community where young people can develop useful skills, gain confidence and support one another as they work towards their goals.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-icon purple">⌘</div>
+            <h3>Accessible learning</h3>
+            <p>Learn through guided online lessons, practical activities and projects designed to help you build skills step by step.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon green">↗</div>
+            <h3>Practical skills</h3>
+            <p>Explore technology and finance topics and apply what you learn to useful tasks and real-world challenges.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon blue">◎</div>
+            <h3>Community and support</h3>
+            <p>Connect with fellow learners, share ideas, receive guidance and grow through collaboration and mentorship.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning" style="background:#F4F6FA">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Skills that help you move forward.</h2>
+          <p>Our learning community brings together technology, finance, personal development and career support.</p>
+        </div>
+        <div class="features">
+          <article class="feature"><div class="feature-icon blue">⌨</div><h3>Technology education</h3><p>Build digital confidence and explore areas such as programming, data, artificial intelligence and web development.</p></article>
+          <article class="feature"><div class="feature-icon purple">▤</div><h3>Finance learning</h3><p>Develop your understanding of financial concepts and practical money management.</p></article>
+          <article class="feature"><div class="feature-icon green">✦</div><h3>Mentorship and careers</h3><p>Strengthen your learning journey with guidance, collaboration and career development support.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pathway" id="journey">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Your learning journey</div>
+          <h2>Getting started is simple.</h2>
+          <p>When applications are open, these are the usual steps to begin your journey with the learning community.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-number">1</div><h3>Apply</h3><p>Complete the application form and tell us about your interests and learning goals.</p></article>
+          <article class="step"><div class="step-number">2</div><h3>Screening</h3><p>Follow the screening instructions shared with applicants.</p></article>
+          <article class="step"><div class="step-number">3</div><h3>Get your access</h3><p>Successful applicants receive information about the learning platform and next steps.</p></article>
+          <article class="step"><div class="step-number">4</div><h3>Start learning</h3><p>Take part in lessons, activities, discussions and collaborative projects.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="container">
+        <div class="cta-box">
+          <div><h2>Ready to take your next step?</h2><p>Follow Spectrum Tech Africa for learning updates, community news and announcements.</p></div>
+          <a class="btn" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Follow @spectrumtechafrica&nbsp; ↗</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <footer>
+    <div class="footer-inner">
+      <a class="brand" href="index.html">
+
+        <span><span class="brand-name">SPECTRUM TECH AFRICA</span><br><span class="brand-tag-footer">Learn. Grow. Build. Thrive.</span></span>
+      </a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="programmes.html">Our Programmes</a>
+        <a href="donate.html">Donate</a>
+        <a href="help-centre.html">Help Centre</a>
+        <a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">@spectrumtechafrica</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Spectrum Tech Africa. All rights reserved. &nbsp; | &nbsp; Learn. Grow. Build. Thrive.</div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

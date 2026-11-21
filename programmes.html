@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore Spectrum Tech Africa programmes in technology, finance, mentorship and career development.">
+<title>Our Programmes | Spectrum Tech Africa</title>
+<style>
+:root{--navy:#071B49;--deep:#041333;--yellow:#FFC928;--ink:#17233f;--muted:#5b6680;--pale:#F3F6FC}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}a{color:inherit}
+.rainbow{height:5px;background:linear-gradient(90deg,#ed1c24,#ff7a00,#ffc928,#00a86b,#00aeef,#7027d8)}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.97);border-bottom:1px solid #e7ebf3}
+.nav{max-width:1180px;margin:auto;padding:10px 24px;min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);font-weight:800}
+.site-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
+.brand-copy{font-size:15px;line-height:1.12}.brand-copy small{display:block;font-size:10px;margin-top:6px;letter-spacing:.3px; color: #aab2ce}
+.links{display:flex;align-items:center;gap:23px}.links a{text-decoration:none;color:var(--navy);font-size:14px;font-weight:700;white-space:nowrap}.links a:hover{color:#7027d8}.links .active{background:var(--navy);color:#fff;padding:10px 18px;border-radius:24px}.links .join{background:var(--yellow);color:var(--navy);padding:10px 18px;border-radius:24px}
+.hero{background:var(--navy);color:white;display:grid;grid-template-columns:48% 52%;min-height:400px;overflow:hidden}
+.hero-copy{padding:62px max(28px,calc((100vw - 1180px)/2));padding-right:35px;align-self:center}
+.kicker{color:var(--yellow);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px}
+h1{font-size:clamp(38px,5vw,60px);line-height:1.06;margin:12px 0 18px}.hero p{font-size:18px;color:#e4ebfa;max-width:520px;margin:0 0 25px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;background:var(--yellow);color:var(--navy);padding:13px 22px;border-radius:28px}.hero-image{min-height:400px;background:linear-gradient(90deg,var(--navy),rgba(7,27,73,.05) 38%),url("assets/ai-machine-learning.jpg") center/cover no-repeat}
+.intro{max-width:900px;margin:auto;padding:58px 24px 28px;text-align:center}.intro h2{font-size:clamp(27px,3vw,38px);color:var(--navy);line-height:1.2;margin:0 0 10px}.intro p{color:var(--muted);margin:0}.rainbow-line{height:5px;width:150px;border-radius:5px;margin:16px auto;background:linear-gradient(90deg,#ed1c24,#ff7a00,#ffc928,#00a86b,#00aeef,#7027d8)}
+.section{max-width:1180px;margin:auto;padding:22px 24px 60px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid #e5eaf3;border-radius:15px;overflow:hidden;background:white;box-shadow:0 5px 18px #071b4910;display:flex;flex-direction:column}
+.card img{width:100%;height:195px;object-fit:cover;display:block}.body{padding:20px;display:flex;flex-direction:column;flex:1}.tag{color:#7027d8;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px}.card h3{color:var(--navy);font-size:21px;margin:5px 0 8px}.card p{color:var(--muted);margin:0 0 16px;flex:1}.topics{font-size:13px;color:#33415e;background:var(--pale);padding:10px 12px;border-radius:8px;margin-bottom:17px}.card a{background:var(--navy);color:white;text-decoration:none;text-align:center;padding:11px 14px;border-radius:8px;font-weight:700;font-size:14px}.card a:hover{background:#173b80}
+.support{max-width:1132px;margin:0 auto 60px;padding:32px;border-radius:18px;background:var(--pale);display:grid;grid-template-columns:1.1fr 1.5fr;gap:30px;align-items:center}.support h2{font-size:30px;color:var(--navy);line-height:1.2;margin:0 0 10px}.support p{margin:0;color:var(--muted)}.support-list{display:grid;grid-template-columns:1fr 1fr;gap:15px}.support-item{background:white;padding:16px;border-radius:12px}.support-item strong{display:block;color:var(--navy);margin-bottom:4px}.support-item span{font-size:14px;color:var(--muted)}
+.how{max-width:1180px;margin:0 auto 60px;padding:0 24px}.how h2{text-align:center;color:var(--navy);font-size:32px;margin:0 0 24px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{border:1px solid #e5eaf3;border-radius:13px;padding:22px}.number{width:36px;height:36px;border-radius:50%;background:var(--yellow);color:var(--navy);font-weight:900;display:grid;place-items:center}.step h3{color:var(--navy);margin:12px 0 5px}.step p{color:var(--muted);font-size:14px;margin:0}
+.cta{max-width:1132px;margin:0 auto 60px;padding:30px 34px;background:linear-gradient(110deg,var(--deep),#12336f);border-radius:16px;color:white;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{font-size:27px;margin:0 0 5px}.cta p{margin:0;color:#e3eafa}
+footer{background:var(--deep);color:white}.foot{max-width:1180px;margin:auto;padding:35px 24px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}.foot .brand{color:white}.foot-links{display:flex;gap:18px;flex-wrap:wrap}.foot-links a{color:#e5ebf8;text-decoration:none;font-size:14px}.copyright{text-align:center;border-top:1px solid #ffffff2b;padding:16px;font-size:13px;color:#cbd5e7}
+@media(max-width:850px){.nav{flex-wrap:wrap}.links{width:100%;overflow-x:auto;gap:16px;padding-bottom:5px}.hero{grid-template-columns:1fr}.hero-copy{padding:45px 25px 28px}.hero-image{min-height:280px}.grid{grid-template-columns:repeat(2,1fr)}.support{margin-left:20px;margin-right:20px;grid-template-columns:1fr}.cta{margin-left:20px;margin-right:20px}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.card img{height:220px}.steps{grid-template-columns:1fr}.support-list{grid-template-columns:1fr}.cta{flex-direction:column;align-items:flex-start}.section{padding-left:18px;padding-right:18px}.intro{padding-top:42px}}
+</style>
+</head>
+<body>
+<div class="rainbow"></div>
+<header>
+<nav class="nav" aria-label="Main navigation">
+<a class="brand" href="index.html"><img src="assets/sta-logo.png" class="site-logo" alt="Spectrum Tech Africa logo"><span class="brand-copy">SPECTRUM TECH AFRICA<small>Learn. Grow. Build. Thrive.</small></span></a>
+<div class="links">
+<a href="index.html">Home</a><a href="index.html#about">About Us</a><a class="active" href="programmes.html" aria-current="page">Our Programmes</a><a href="community.html">Community</a><a href="donate.html">Donate</a><a href="help-centre.html">Help Centre</a><a class="join" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Join Us</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="hero-copy">
+<div class="kicker">Learn skills. Build confidence. Create opportunities.</div>
+<h1>Explore Our<br>Programmes</h1>
+<p>We support queer African youths to develop practical technology and finance skills, connect with mentors and take meaningful steps towards their goals.</p>
+<a class="btn" href="#programmes">Explore Programmes&nbsp; →</a>
+</div>
+<div class="hero-image" role="img" aria-label="Young Black African learners collaborating on technology"></div>
+</section>
+
+<section class="intro">
+<h2>Learning That Moves You Forward</h2>
+<p>Our programmes bring together digital skills, financial knowledge, mentorship and career development in a supportive learning community.</p>
+<div class="rainbow-line"></div>
+</section>
+
+<section class="section" id="programmes">
+<div class="grid">
+<article class="card"><img src="assets/python-programming.jpg" alt="Young learner practising computer programming"><div class="body"><span class="tag">Technology</span><h3>Python Programming</h3><p>Build a foundation in programming and learn how to write code to solve practical problems.</p><div class="topics">Explore: Python fundamentals, problem-solving and practical coding.</div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Ask About This Programme →</a></div></article>
+<article class="card"><img src="assets/data-analytics.jpg" alt="Learner studying charts and data on a laptop"><div class="body"><span class="tag">Technology</span><h3>Data Analytics</h3><p>Develop the ability to work with data, understand patterns and communicate useful insights.</p><div class="topics">Explore: Data handling, analysis and visualisation.</div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Ask About This Programme →</a></div></article>
+<article class="card"><img src="assets/ai-machine-learning.jpg" alt="Learners collaborating around a laptop"><div class="body"><span class="tag">Emerging Technology</span><h3>Artificial Intelligence and Machine Learning</h3><p>Get introduced to the ideas and tools behind intelligent systems and machine learning.</p><div class="topics">Explore: AI concepts, machine learning foundations and responsible use.</div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Ask About This Programme →</a></div></article>
+<article class="card"><img src="assets/web-development.jpg" alt="Learner working on a laptop in a study space"><div class="body"><span class="tag">Technology</span><h3>Web Development</h3><p>Learn how websites are structured and built, and develop the skills to create web experiences.</p><div class="topics">Explore: HTML, CSS and web development foundations.</div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Ask About This Programme →</a></div></article>
+<article class="card"><img src="assets/graphics-design.jpg" alt="Learner creating a digital graphic design"><div class="body"><span class="tag">Digital Creativity</span><h3>Graphics Design</h3><p>Build creative digital skills and learn to communicate ideas through visual design.</p><div class="topics">Explore: Design principles and digital creative projects.</div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Ask About This Programme →</a></div></article>
+<article class="card"><img src="assets/finance-literacy.jpg" alt="Learner taking notes while studying financial information"><div class="body"><span class="tag">Finance</span><h3>Financial Literacy</h3><p>Strengthen everyday money skills and develop a better understanding of personal finance.</p><div class="topics">Explore: Budgeting, saving and informed financial decisions.</div><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Ask About This Programme →</a></div></article>
+</div>
+</section>
+
+<section class="support">
+<div><div class="kicker">Beyond the classroom</div><h2>Support for Your Next Step</h2><p>Learning is stronger when people have guidance, encouragement and a community around them. Spectrum Tech Africa also focuses on mentorship and career development.</p></div>
+<div class="support-list">
+<div class="support-item"><strong>Mentorship</strong><span>Connect learning with guidance, shared experience and encouragement.</span></div>
+<div class="support-item"><strong>Career Development</strong><span>Build confidence and prepare for professional opportunities.</span></div>
+<div class="support-item"><strong>Community Learning</strong><span>Learn alongside peers and take part in a supportive community.</span></div>
+<div class="support-item"><strong>Practical Growth</strong><span>Apply new knowledge through activities and projects.</span></div>
+</div>
+</section>
+
+<section class="how">
+<h2>How to Get Involved</h2>
+<div class="steps">
+<div class="step"><div class="number">1</div><h3>Connect With Us</h3><p>Follow Spectrum Tech Africa and contact the team to learn about current learning opportunities.</p></div>
+<div class="step"><div class="number">2</div><h3>Apply When Applications Open</h3><p>Complete the relevant application process and provide the information requested by the programme team.</p></div>
+<div class="step"><div class="number">3</div><h3>Learn and Participate</h3><p>Join the learning community, take part in activities and keep building your skills.</p></div>
+</div>
+</section>
+
+<section class="cta">
+<div><h2>Ready to Learn, Grow and Build?</h2><p>Connect with Spectrum Tech Africa for updates about programmes and opportunities.</p></div>
+<a class="btn" href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">Connect With Us →</a>
+</section>
+</main>
+<footer>
+<div class="foot">
+<a class="brand" href="index.html"><span class="brand-copy">SPECTRUM TECH AFRICA<small>Learn. Grow. Build. Thrive.</small></span></a>
+<div class="foot-links"><a href="index.html">Home</a><a href="index.html#about">About Us</a><a href="programmes.html">Our Programmes</a><a href="donate.html">Donate</a><a href="help-centre.html">Help Centre</a><a href="https://www.instagram.com/spectrumtechafrica/" target="_blank" rel="noopener">@spectrumtechafrica</a></div>
+</div>
+<div class="copyright">© 2026 Spectrum Tech Africa. All rights reserved. &nbsp; | &nbsp; Learn. Grow. Build. Thrive.</div>
+</footer>
+</body>
+</html>
